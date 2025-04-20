@@ -1,0 +1,70 @@
+/* color palette from <https://github.com/vuejs/theme> */
+@import './primeui.css';
+
+:root {
+  --color-background: #ffffffaa;
+  --color-background-soft: #ccc;
+  --color-background-mute: #eee;
+  --color-border: #ddd;
+  --color-border-hover: #aaa;
+  --color-heading: #111;
+  --color-text: #333;
+}
+
+.house-gryffindor {
+  --color-primary: #ae0001;
+  --color-secondary: #d3a625;
+  --color-primary-contrast: #fff;
+}
+
+.house-slytherin {
+  --color-primary: #2a623d;
+  --color-secondary: #aaaaaa;
+  --color-primary-contrast: #fff;
+}
+
+.house-ravenclaw {
+  --color-primary: #222f5b;
+  --color-secondary: #946b2d;
+  --color-primary-contrast: #fff;
+}
+
+.house-hufflepuff {
+  --color-primary: #f0c75e;
+  --color-secondary: #726255;
+  --color-primary-contrast: #222;
+}
+
+.app-dark {
+  --color-background: #000000aa;
+  --color-background-soft: #111;
+  --color-background-mute: #222;
+  --color-border: #333;
+  --color-border-hover: #555;
+  --color-heading: #fff;
+  --color-text: #ccc;
+}
+
+.app-dark .house-gryffindor {
+  --color-primary: #ae0001;
+  --color-secondary: #d3a625;
+  --color-primary-contrast: #fff;
+}
+
+.app-dark .house-slytherin {
+  --color-primary: #2a623d;
+  --color-secondary: #aaaaaa;
+  --color-primary-contrast: #fff;
+}
+
+.app-dark .house-ravenclaw {
+  --color-primary: #222f5b;
+  --color-secondary: #946b2d;
+  --color-primary-contrast: #fff;
+}
+
+.app-dark .house-hufflepuff {
+  --color-primary: #f0c75e;
+  --color-secondary: #726255;
+  --color-primary-contrast: #222;
+}

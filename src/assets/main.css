@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@import './base.css';
+
+@theme static {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-primary-contrast: var(--primary-contrast);
+  --color-background-soft: var(--background-soft);
+  --color-background-mute: var(--background-mute);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-heading: var(--heading);
+  --color-text: var(--text);
+
+  --color-primary-color: var(--p-primary-500);
+  --color-primary-contrast-color: var(--p-surface-0);
+  --color-primary-hover-color: var(--p-primary-600);
+  --color-primary-active-color: var(--p-primary-700);
+  --color-content-border-color: var(--p-surface-200);
+  --color-content-hover-background: var(--p-surface-100);
+  --color-content-hover-color: var(--p-surface-800);
+  --color-highlight-background: var(--p-primary-50);
+  --color-highlight-color: var(--p-primary-700);
+  --color-highlight-focus-background: var(--p-primary-100);
+  --color-highlight-focus-color: var(--p-primary-800);
+  --color-text-color: var(--p-surface-700);
+  --color-text-hover-color: var(--p-surface-800);
+  --color-text-muted-color: var(--p-surface-500);
+  --color-text-hover-muted-color: var(--p-surface-600);
+}
+
+html,
+body {
+  background-color: var(--color-background);
+  height: 100%;
+  width: 100%;
+  background-image: url('https://img.freepik.com/premium-photo/paper-frames-decorative-backgrounds-vintageinspired-urban-themes-creative-templates_1020495-134454.jpg?w=996');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+body.app-dark {
+  background-image: url('https://img.freepik.com/free-photo/spooky-gothic-cathedral-dark-symbol-ancient-spirituality-generated-by-artificial-intelligence_188544-241546.jpg?t=st=1745069250~exp=1745072850~hmac=2103053cb4e6d250ffd29b5047e1a49c958169fa024db773244b8a206fae0abf&w=996');
+}
+
+* {
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0rem;
+  }
+}
