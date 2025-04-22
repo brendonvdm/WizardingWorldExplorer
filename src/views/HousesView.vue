@@ -22,6 +22,7 @@ const tableColumns = [
 onMounted(() => {
   document.title = 'Hogwarts Houses'
   loadHouses()
+  housesStore.setHousePointsFromLocalStorage()
 })
 
 function handleRetry() {
@@ -90,7 +91,25 @@ function loadHouses() {
         <Carousel v-else :columns="tableColumns" :data="housesStore.getHouses" row-key="id">
           <template #name="{ row }">
             <div class="text-4xl text-text pb-4">
-              {{ (row as House).name }}
+              <div>{{ (row as House).name }}</div>
+              <div
+                class="inline-block px-3 py-1 font-semibold rounded-full m-2"
+                :class="(row as House).name.toLowerCase()"
+              >
+                {{ housesStore.getHousePoints((row as House).name) }}
+              </div>
+              <div class="flex gap-4 text-sm">
+                <Button
+                  label="Add 10 Points"
+                  @click="housesStore.addHousePoints((row as House).name, 10)"
+                  class="p-button-sm"
+                ></Button>
+                <Button
+                  label="Deduct 10 points"
+                  @click="housesStore.addHousePoints((row as House).name, -10)"
+                  class="p-button-sm"
+                ></Button>
+              </div>
             </div>
           </template>
           <template #image="{ row }">
